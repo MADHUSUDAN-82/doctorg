@@ -8,6 +8,7 @@ import numpy as np
 import pandas as pd
 import tensorflow.lite as tflite
 from sentence_transformers import SentenceTransformer
+from huggingface_hub import HfApi, HfFolder, Repository, hf_hub_url, cached_download
 from sklearn.preprocessing import LabelEncoder
 import os
 import google.generativeai as genai
