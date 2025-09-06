@@ -1,12 +1,23 @@
+# Core app
 streamlit==1.44.0
 numpy==1.26.4
 pandas==2.2.3
-sentence-transformers==4.0.1
-scikit-learn==1.6.1
+scikit-learn==1.3.2
+
+# NLP / Embeddings
+sentence-transformers==3.2.1
+huggingface_hub==0.24.5
+transformers==4.36.2
+spacy==3.8.3
+
+# GenAI & Agents
 google-generativeai==0.8.4
 crewai==0.100.1
-tf-keras==2.19.0
-tensorflow==2.19.0
-spacy==3.8.3
 chromadb==0.6.3
-pysqlite3-binary
+
+# Deep Learning
+tensorflow==2.19.0
+tf-keras==2.19.0
+
+# Database
+pysqlite3-binary==0.5.2
