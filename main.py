@@ -1,21 +1,19 @@
-import sys
-sys.modules["sqlite3"] = __import__("pysqlite3")
-
-
 import streamlit as st
 import spacy
 import numpy as np
 import pandas as pd
-import tensorflow.lite as tflite
-from sentence_transformers import SentenceTransformer
+
 from sklearn.preprocessing import LabelEncoder
 import os
 import google.generativeai as genai
+from dotenv import load_dotenv
+load_dotenv()
+os.environ["TRANSFORMERS_NO_META_IMPORT"] = "1"
 
-
-
-
-model_llm = genai.GenerativeModel("models/gemini-2.0-flash-exp")
+import tensorflow.lite as tflite
+from sentence_transformers import SentenceTransformer
+genai.configure(api_key=os.getenv("GOOGLE_API_KEY"))
+model_llm = genai.GenerativeModel("models/gemini-2.5-flash")
 st.set_page_config(page_title="Disease Prediction AI", page_icon="🩺", layout="wide")
 
 
