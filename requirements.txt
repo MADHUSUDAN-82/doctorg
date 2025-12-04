@@ -12,12 +12,8 @@ spacy==3.8.3
 
 # GenAI & Agents
 google-generativeai==0.8.4
-crewai==0.100.1
 chromadb==0.6.3
 
 # Deep Learning
 tensorflow==2.19.0
 tf-keras==2.19.0
-
-# Database
-pysqlite3-binary==0.5.2
